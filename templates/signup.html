@@ -1,0 +1,195 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
+content %}
+<div
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 1.5rem;
+    padding: 2em;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  "
+>
+  <h1
+    style="
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 2.4rem;
+      text-align: center;
+    "
+  >
+    Sign Up
+  </h1>
+
+  <form id="signUpForm">
+    <!-- Group 1: First Name and Last Name -->
+    <div style="display: flex; gap: 20px; width: 100%; margin-bottom: 15px">
+      <input
+        type="text"
+        id="fnameinput"
+        placeholder="Enter First Name"
+        style="
+          width: 50%;
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 1rem;
+          box-sizing: border-box;
+        "
+      />
+      <input
+        type="text"
+        id="lnameinput"
+        placeholder="Enter Last Name"
+        style="
+          width: 50%;
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 1rem;
+          box-sizing: border-box;
+        "
+      />
+    </div>
+
+    <!-- Group 2: Email and Phone -->
+    <div style="display: flex; gap: 20px; width: 100%; margin-bottom: 15px">
+      <input
+        type="email"
+        id="emailinput"
+        placeholder="Enter Email"
+        style="
+          width: 50%;
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 1rem;
+          box-sizing: border-box;
+        "
+      />
+      <input
+        type="text"
+        id="phoneinput"
+        placeholder="Enter Phone Number"
+        style="
+          width: 50%;
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 1rem;
+          box-sizing: border-box;
+        "
+      />
+    </div>
+
+    <!-- Group 3: Password and Confirm Password -->
+    <div style="display: flex; gap: 20px; width: 100%; margin-bottom: 15px">
+      <input
+        type="password"
+        id="passwordinput"
+        placeholder="Enter Password"
+        style="
+          width: 50%;
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 1rem;
+          box-sizing: border-box;
+        "
+      />
+      <input
+        type="password"
+        id="password2input"
+        placeholder="Confirm Password"
+        style="
+          width: 50%;
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 1rem;
+          box-sizing: border-box;
+        "
+      />
+    </div>
+
+    <!-- Group 4: Gender and Birthdate -->
+    <div style="display: flex; gap: 20px; width: 100%; margin-bottom: 15px">
+      <select
+        id="genderinput"
+        style="
+          width: 50%;
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 1rem;
+          box-sizing: border-box;
+          color: #757575;
+        "
+      >
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <input
+        type="date"
+        id="birthdateinput"
+        style="
+          width: 50%;
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          font-size: 1rem;
+          box-sizing: border-box;
+          color: #757575;
+        "
+      />
+    </div>
+
+    <!-- Sign Up Button -->
+    <button
+      type="submit"
+      id="singUpButton"
+      style="
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-bottom: 20px;
+      "
+    >
+      Sign Up
+    </button>
+
+    <p
+      style="
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: #555;
+        text-align: center;
+      "
+    >
+      Already have an account?
+      <a
+        href="{{ url_for('login') }}"
+        style="color: #007bff; text-decoration: none; font-weight: bold"
+        >Log In</a
+      >
+    </p>
+  </form>
+</div>
+
+{% endblock %} {% block script %}
+<script src="/static/js/base.js"></script>
+
+<script src="/static/js/singup.js"></script>
+{% endblock %}

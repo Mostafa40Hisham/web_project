@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h2 class="logo">
+          <span class="first">Our</span> <span class="second">Library</span>
+        </h2>
+      </div>
+      <div>
+        <nav>
+          <ul class="navbar">
+            <li><a href="{{ url_for('home') }}" class="nav-li">Home</a></li>
+            <li><a href="{{ url_for('about') }}" class="nav-li">About</a></li>
+            <li id="servicesButton"><a href="#" class="nav-li">Services</a></li>
+            <li><a href="{{ url_for('contact') }}" class="nav-li">Contact</a></li>
+            <li>
+              <a href="{{ url_for('login') }}" 
+                ><button id="loginNavButton" class="loginbtn">Login</button></a
+              >
+            </li>
+            <li>
+              <a href="{{ url_for('signup') }}"
+                ><button id="signUpNavButton" class="signupbtn">Sign Up</button></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main-content">
+      {% block content %}
+      <!-- Placeholder for page content -->
+      {% endblock %}
+    </main>
+    <footer>
+      <p>&copy; 2024 Product List. All rights reserved.</p>
+      <p>Made By :<span class="made"> our team</span></p>
+    </footer>
+    <script></script>
+    {% block script %}
+    <script src="/static/js/base.js">
+    </script>
+    {% endblock %}
+  </body>
+</html>

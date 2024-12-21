@@ -1,0 +1,199 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  background: url(../img/Premium_Photo___Abstract_blur_library_Blurred_book_shelves_and_hall_Generative_Ai.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #333;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0px 0px 20px 20px;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo .first {
+  /* color: #f9a602; */
+  color: #ADD8E6;
+}
+
+.logo .second {
+  color: #007bff;
+}
+
+.navbar {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-li:hover {
+  background-color: black;
+}
+
+
+
+.navbar li button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+/* ------------------------------------------------- */
+
+.navbar li .loginbtn {
+  background-color: transparent;
+  border: 1px solid #007bff;
+  overflow: hidden;
+}
+
+.navbar li .loginbtn::before {
+  content: '';
+  height: 0%;
+  width: 100%;
+  background-color: #007bff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 20px 20px 0 0;
+  transition: .3s;
+}
+
+.navbar li .loginbtn:hover::before {
+  height: 180%;
+}
+
+.navbar li .loginbtn:hover {
+  color: white;
+}
+
+
+/* -------------------------------- */
+
+
+.navbar li .signupbtn {
+  background-color: transparent;
+  border: 1px solid #007bff;
+  overflow: hidden;
+}
+
+.navbar li .signupbtn::before {
+  content: '';
+  height: 0%;
+  width: 100%;
+  background-color: #007bff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  border-radius: 0 0 20px 20px;
+  transition: .3s;
+}
+
+.navbar li .signupbtn:hover::before {
+  height: 180%;
+}
+
+.navbar li .signupbtn:hover {
+  color: white;
+}
+
+/* ------------------------------------------------- */
+
+
+/* Main Content */
+.main-content {
+  flex-grow: 1; /* Allows the main content to take up remaining space */
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #333333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  flex-shrink: 0; /* Prevents the footer from shrinking */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer p .made {
+  color: #007bff;
+}
+
+/* Media Queries */
+
+/* Small devices (max-width: 768px) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .grid-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  table thead th,
+  table tbody td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .imgrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .page_name {
+    font-size: 1.2rem;
+  }
+}

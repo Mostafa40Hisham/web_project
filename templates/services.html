@@ -1,0 +1,90 @@
+{% extends "base.html" %} {% block title %}Services{% endblock %} {% block
+content %}
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    flex-direction: row; /* Buttons in a row */
+    gap: 100px; /* Space between buttons */
+  "
+>
+  <div style="
+    background-color: #eee;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    box-shadow: inset 0px 0px 10px black;
+    border-radius: 20px 0;
+  ">
+  <img src="../static/img/1564535_customer_user_userphoto_account_person_icon.png" alt="User Icon" 
+    style="
+      width: 200px;
+      height: 200px;
+      margin-top: 40px;
+    "
+  >
+  <a href="/userServices">
+    <button
+      style="
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 48px;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 20%;
+        transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      "
+      onmouseover="this.style.backgroundColor='#0056b3'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 10px rgba(0, 0, 0, 0.2)';"
+      onmouseout="this.style.backgroundColor='#007BFF'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';"
+    >
+      User Services
+    </button></a>
+    </div>
+
+  <div style="
+    background-color: #eee;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    box-shadow: inset 0px 0px 10px black;
+    border-radius: 0 20px;
+  ">
+
+    <img src="../static/img/8541567_book_open_reading_icon.png" alt="Book Icon" 
+    style="
+      width: 200px;
+      height: 200px;
+      margin-top: 40px;
+    "
+  >
+  <a href="/bookServices">
+    <button
+      style="
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px 48px;
+        font-size: 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 20%;
+        transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      "
+      onmouseover="this.style.backgroundColor='#0056b3'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 10px rgba(0, 0, 0, 0.2)';"
+      onmouseout="this.style.backgroundColor='#007BFF'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.1)';"
+    >
+      Book Services
+    </button></a
+  >
+  </div>
+</div>
+{% endblock %}
+{% block script %}
+<script src="/static/js/base.js"></script>
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends "base.html" %} {% block title %}User Services{% endblock %} {% block
+content %}
+<div
+  style="
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  "
+>
+  <a href="/addUser"
+    ><button
+      style="
+        padding: 10px 15px;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      "
+    >
+      Add New User
+    </button></a
+  >
+  <table style="width: 100%; border-collapse: collapse; margin-top: 20px">
+    <thead>
+      <tr style="background-color: #007bff; color: #fff">
+        <th style="padding: 10px; font-size: 1rem; border: 1px solid #ddd">
+          User
+        </th>
+        <th style="padding: 10px; font-size: 1rem; border: 1px solid #ddd">
+          Services
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for person in persons %}
+      <tr style="background-color: #f7f7f7">
+        <td
+          style="
+            padding: 10px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            color: #555;
+          "
+        >
+          {{person.first_name}}
+        </td>
+        <td
+          style="
+            padding: 10px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            color: #555;
+          "
+        >
+          <div
+            style="
+              gap: 2em;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
+          >
+            <a href="/viewUser" style="text-decoration: none">
+              <button
+                style="
+                  padding: 10px 15px;
+                  background-color: #f99b1d;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  font-size: 16px;
+                  transition: background-color 0.3s;
+                "
+                onclick="localStorage.setItem('user_id', '{{ person.id }}')"
+              >
+                View
+              </button>
+            </a>
+
+            <a href="/updateUser">
+              <button
+                style="
+                  padding: 10px 15px;
+                  background-color: #007bff;
+                  color: white;
+                  border: none;
+                  border-radius: 5px;
+                  cursor: pointer;
+                  font-size: 16px;
+                  transition: background-color 0.3s;
+                "
+                onclick="localStorage.setItem('user_id', '{{person.id}}')"
+              >
+                Update
+              </button></a
+            >
+            <button
+              style="
+                padding: 10px 15px;
+                background-color: red;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s;
+              "
+              onclick="deleteUser('{{person.id}}')"
+            >
+              Remove
+            </button>
+          </div>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %} {% block script %}
+<script src="/static/js/base.js"></script>
+<script src="/static/js/userServices.js"></script>
+{% endblock %}

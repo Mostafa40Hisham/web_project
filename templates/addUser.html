@@ -1,0 +1,217 @@
+{% extends "base.html" %} {% block title %}Add User{% endblock %} {% block
+content %}
+<div
+  style="
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  "
+>
+  <h1
+    style="
+      text-align: center;
+      color: #222;
+      margin-bottom: 25px;
+      font-size: 24px;
+      font-weight: 600;
+    "
+  >
+    Add New User
+  </h1>
+  <form id="userForm">
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px">
+      <label
+        for="firstName"
+        style="font-weight: 600; color: #444; margin-bottom: 5px"
+      >
+        First Name
+      </label>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        placeholder="First Name"
+        required
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+          transition: border-color 0.3s;
+        "
+      />
+    </div>
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px">
+      <label
+        for="lastName"
+        style="font-weight: 600; color: #444; margin-bottom: 5px"
+      >
+        Last Name
+      </label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        placeholder="Last Name"
+        required
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+          transition: border-color 0.3s;
+        "
+      />
+    </div>
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px">
+      <label
+        for="email"
+        style="font-weight: 600; color: #444; margin-bottom: 5px"
+      >
+        Email
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email Address"
+        required
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+          transition: border-color 0.3s;
+        "
+      />
+    </div>
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px">
+      <label
+        for="phone"
+        style="font-weight: 600; color: #444; margin-bottom: 5px"
+      >
+        Phone Number
+      </label>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        placeholder="Phone Number"
+        required
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+          transition: border-color 0.3s;
+        "
+      />
+    </div>
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px">
+      <label
+        for="password"
+        style="font-weight: 600; color: #444; margin-bottom: 5px"
+      >
+        Password
+      </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Password"
+        required
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+          transition: border-color 0.3s;
+        "
+      />
+    </div>
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px">
+      <label
+        for="gender"
+        style="font-weight: 600; color: #444; margin-bottom: 5px"
+      >
+        Gender
+      </label>
+      <select
+        id="gender"
+        name="gender"
+        required
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+        "
+      >
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px">
+      <label
+        for="birthdate"
+        style="font-weight: 600; color: #444; margin-bottom: 5px"
+      >
+        Birthdate
+      </label>
+      <input
+        type="date"
+        id="birthdate"
+        name="birthdate"
+        required
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+        "
+      />
+    </div>
+    <button
+      type="submit"
+      style="
+        padding: 12px 20px;
+        background-color: #4caf50;
+        color: #ffffff;
+        font-weight: 700;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      "
+      onmouseover="this.style.backgroundColor='#45a049';"
+      onmouseout="this.style.backgroundColor='#4caf50';"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+{% endblock %} {% block script %}
+<script src="/static/js/base.js"></script>
+<script src="/static/js/addUser.js"></script>
+{% endblock %}

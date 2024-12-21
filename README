@@ -1,0 +1,74 @@
+E-Library project documentation
+Overview:
+This project was made to make it easier for administrators of an E-library to manage books (add, delete, view and edit books) and users (add, delete, view and edit users).
+Home page: 
+The first page that you can see when you run the website is the home page which displays all the books in the library each in an individual card,
+Each card contains the books (image, title, author, price and the “read me” button).
+Where if you click the “read me” button without logging in the user will be redirected to the login page.
+And if the user is already logged in the user will be redirected to another site to read the book.
+Sign-up page:
+In this page we have a form that consists of 8 inputs (first name, last name, email, phone number, password, confirm password, gender and birthdate)
+And the validation of the user input in each textbox is:
+•	The first name and last name’s first letter must be upper case with no special characters.
+•	The password must contain letters, numbers and special characters.
+•	The email must contain “@”, domain name (EG: Gmail) and the top level domain (EG: .com).
+•	All inputs must have a value with correct data type.
+The sign-up form contains a button “sign up”  which adds the user to list named “persons” by the route http://127.0.0.1:5000/add_user .
+Then the user is redirected to the login page.
+Login page:  This page contains a form that has two inputs, which are (“Email” And “Password”).
+And a ” Remember me” check box that if checked the user will stay logged in for 7 days by adding user info in cookies.
+And a “Login ” button that gets the data of all users from 
+http://127.0.0.1:5000/users 
+And finds the user whose email and password matches with the input’s value using “find” method.
+And if the email or password of the user does not match then the page displays the message: “Invalid email or password. Please try again.”
+But if the email and password matches then the userId and a variable named “Logged” are stored in the local storage where the variable logged = True 
+Then the user will be redirected to home page.
+Profile page: In this page we have a card that contains the user info.
+This user info are displayed using the route:
+http://127.0.0.1:5000/users/<int:user_id>   where the user_id is stored in the local storage.
+About me page: This page displays some info about the website
+Contact us page: this page contains contact information for the developers of the website.
+Services page:  the user can only access this page while logged in which contains two cards :
+•	Books services.
+•	User services.
+Each card redirects the user to different page.
+•	The book services page contains a table that has 
+1.	the picture of the book 
+2.	The price of the book 
+3.	Some operations that can be done to the book of the user’s choice
+And these operations are view, update and delete book.
+View operation: It saves a variable named “book_id” in the local storage which is a variable that carries the id of the book.
+Then the user is redirected to the view book page by the route
+http://127.0.0.1:5000/getBooks/<int:book_id>
+And display the book data.
+Update operation: it saves a variable named “book_id” in the local storage which is a variable that carries the id of the book.
+Then the user is redirected to the update book page which has a form that it’s inputs are filled with the data that we got using the previous route.
+And this form contains a button that saves the new data after the update in the list “Books” using the route :
+http://127.0.0.1:5000/updateBooks/<int:book_id>
+Delete operation: we use this route :
+” http://127.0.0.1:5000/deleteBooks/<int:book_id>”
+To delete books by the “book_id” stored in the local storage
+And at the top of the table we have the “add book” button
+When this button is clicked the user will be redirected to another page named “add new book”, in this page we have a form after being filled then the “submit” button is clicked the route http://127.0.0.1:5000/addBook will  save the book data to the list named “Books” then the user will be redirected to the home page.
+•	The User services page contains a table that has 
+1.	The name of the user.
+2.	Some operations that can be done to the user profile.
+And these operations are view, update and delete user.
+View operation: It saves a variable named “user_id” in the local storage which is a variable that carries the id of the user.
+Then the user is redirected to the view user page by the route
+http://127.0.0.1:5000/users/<int:user_id>
+And display the user data.
+Update operation: it saves a variable named “user_id” in the local storage which is a variable that carries the id of the user.
+Then the user is redirected to the update user page which has a form that its inputs are filled with the data that we got using the previous route.
+And this form contains a button that saves the new data after the update in the list “Persons” using the route:
+http://127.0.0.1:5000/ updateUser/<int:user_id>
+
+Delete operation: we use this route:
+” http://127.0.0.1:5000/ deleteUser/<int:user_id>”
+To delete users by the “user_id” stored in the local storage
+And at the top of the table we have the “add new user” button
+When this button is clicked the user will be redirected to another page named “add user”, in this page we have a form after being filled then the “submit” button is clicked the route http://127.0.0.1:5000/add_user  will  save the user data to the list named “Persons” then the user will be redirected to the home page.
+Base page : This page is extended through all the pages of the website and contains the navigation bar that contains all the links to every page on the website.
+
+
+

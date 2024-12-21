@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+{% block title %}Add Book{% endblock %}
+{% block content %}
+<div
+  style="
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  "
+>
+  <h1 style="text-align: center; color: #222; margin-bottom: 25px; font-size: 24px; font-weight: 600;">
+    Add New Book
+  </h1>
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px;">
+      <label for="bookTitle" style="font-weight: 600; color: #444; margin-bottom: 5px;">
+        Book Title
+      </label>
+      <input
+        type="text"
+        id="bookTitle"
+        name="bookTitle"
+        placeholder="Book name"
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+          transition: border-color 0.3s;
+        "
+        onfocus="this.style.borderColor='#4caf50';"
+        onblur="this.style.borderColor='#ddd';"
+      />
+    </div>
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px;">
+      <label for="bookAuthor" style="font-weight: 600; color: #444; margin-bottom: 5px;">
+        Book Author
+      </label>
+      <input
+        type="text"
+        id="bookAuthor"
+        name="bookAuthor"
+        placeholder="Book Author"
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+          transition: border-color 0.3s;
+        "
+        onfocus="this.style.borderColor='#4caf50';"
+        onblur="this.style.borderColor='#ddd';"
+      />
+    </div>
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px;">
+      <label for="bookDescription" style="font-weight: 600; color: #444; margin-bottom: 5px;">
+        Book Description
+      </label>
+      <textarea
+        id="bookDescription"
+        name="bookDescription"
+        placeholder="Book Description"
+        rows="4"
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+          resize: vertical;
+          transition: border-color 0.3s;
+        "
+        onfocus="this.style.borderColor='#4caf50';"
+        onblur="this.style.borderColor='#ddd';"
+      ></textarea>
+    </div>
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px;">
+      <label for="category" style="font-weight: 600; color: #444; margin-bottom: 5px;">
+        Book Category
+      </label>
+      <input
+        type="text"
+        id="category"
+        name="category"
+        placeholder="Book Category"
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+          transition: border-color 0.3s;
+        "
+        onfocus="this.style.borderColor='#4caf50';"
+        onblur="this.style.borderColor='#ddd';"
+      />
+    </div>
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px;">
+      <label for="price" style="font-weight: 600; color: #444; margin-bottom: 5px;">
+        Book Price
+      </label>
+      <input
+        type="text"
+        id="price"
+        name="price"
+        placeholder="Book Price"
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+          transition: border-color 0.3s;
+        "
+        onfocus="this.style.borderColor='#4caf50';"
+        onblur="this.style.borderColor='#ddd';"
+      />
+    </div>
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px;">
+      <label for="bookImage" style="font-weight: 600; color: #444; margin-bottom: 5px;">
+        Book Image
+      </label>
+      <input
+        type="text"
+        id="bookImage"
+        name="bookImage"
+        placeholder="Book Image URL"
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+          transition: border-color 0.3s;
+        "
+        onfocus="this.style.borderColor='#4caf50';"
+        onblur="this.style.borderColor='#ddd';"
+      />
+    </div>
+    <div style="display: flex; flex-direction: column; margin-bottom: 15px;">
+      <label for="bookPdf" style="font-weight: 600; color: #444; margin-bottom: 5px;">
+        Book PDF
+      </label>
+      <input
+        type="text"
+        id="bookPdf"
+        name="bookPdf"
+        placeholder="Book PDF URL"
+        style="
+          padding: 12px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 14px;
+          color: #333;
+          outline: none;
+          transition: border-color 0.3s;
+        "
+        onfocus="this.style.borderColor='#4caf50';"
+        onblur="this.style.borderColor='#ddd';"
+      />
+    </div>
+    <button
+      style="
+        padding: 12px 20px;
+        background-color: #4caf50;
+        color: #ffffff;
+        font-weight: 700;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      "
+      onmouseover="this.style.backgroundColor='#45a049';"
+      onmouseout="this.style.backgroundColor='#4caf50';"
+      id="submitButton"
+    >
+      Add Book
+    </button>
+</div>
+{% endblock %}
+{% block script %}
+<script src="/static/js/base.js"></script>
+<script src="/static/js/addNewBook.js"></script>
+{% endblock %}

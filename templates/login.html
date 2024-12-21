@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block title %}Log In{% endblock %}
+{% block content %}
+
+<div
+  style="
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 4em 2em;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  "
+>
+  <h1
+    style="
+      margin-bottom: 20px;
+      color: black;
+      font-size: 2.4rem;
+      text-align: center;
+    "
+  >
+    Log In
+  </h1>
+  <input
+    id="emailInput"
+    type="text"
+    placeholder="Enter Email"
+    style="
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    "
+  />
+  <input
+    id="passwordInput"
+    type="password"
+    placeholder="Enter Password"
+    style="
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    "
+  />
+
+  <!-- Remember Me Checkbox -->
+  <label style="margin-bottom: 15px;">
+    <input
+      type="checkbox"
+      id="rememberMe"
+      style="margin-right: 10px; vertical-align: middle;"
+    />
+    Remember Me
+  </label>
+
+  <button
+    id="logInButton"
+    style="
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 20px;
+    "
+    onmouseover="this.style.backgroundColor='#0056b3'"
+    onmouseout="this.style.backgroundColor='#007bff'"
+  >
+    Log In
+  </button>
+
+  <p
+    style="
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+    "
+  >
+    Don't have an account? 
+    <a
+      href="{{ url_for('signup') }}"
+      style="
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      "
+      onmouseover="this.style.color='#0056b3'"
+      onmouseout="this.style.color='#007bff'"
+    >
+      Sign Up
+    </a>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script src="/static/js/base.js"></script>
+
+<script src="/static/js/logIn.js"></script>
+{% endblock %}
